@@ -12,6 +12,7 @@ export interface IFreelancer {
 
 export const ACTIONS = {
     FREELANCERS_LOADED: 'FREELANCERS_LOADED',
+    DELETE_FREELANCER: 'DELETE_FREELANCER',
 }
 
 export function freelancersReducer(
@@ -21,8 +22,14 @@ export function freelancersReducer(
         case ACTIONS.FREELANCERS_LOADED:
             // Return the new state with the payload as freelancers list
             return Array.prototype.concat(action.payload);
+        case ACTIONS.DELETE_FREELANCER:
+            // Remove the element from the array
+            state.splice(state.indexOf(action.payload), 1);
+            // We need to create another reference
+            return Array.prototype.concat(state);
         default:
             return state;
     }
 }
 // function will be called each time an action is dispatched through the store. 
+// important to create a new array from the old one in order to have a new immutable state

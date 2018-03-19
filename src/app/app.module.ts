@@ -4,12 +4,14 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { FreelancerGridComponent } from './freelancer-grid/freelancer-grid.component';
+import { FilterComponent } from './filter/filter.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    FreelancerGridComponent
+    FreelancerGridComponent,
+    FilterComponent
   ],
   imports: [
     BrowserModule
