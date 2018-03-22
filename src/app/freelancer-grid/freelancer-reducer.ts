@@ -33,3 +33,4 @@ export function freelancersReducer(
 }
 // function will be called each time an action is dispatched through the store. 
 // important to create a new array from the old one in order to have a new immutable state
+
