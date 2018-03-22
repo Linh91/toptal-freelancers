@@ -48,3 +48,4 @@ export class FilterComponent implements OnInit {
   }
 
 }
+// Rx.observable.merge to combine two observables give by your formControls, then you debounce that new observable before triggering the filter function

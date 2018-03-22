@@ -34,3 +34,5 @@ export class FreelancerGridComponent implements OnInit {
   }
 
 }
+
+// combineLatest will fire if one of the two observables fire and then combine each sate using the applyFilter
